@@ -47,16 +47,17 @@ class _RandomApiState extends State<RandomApi> {
               return InkWell(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ProfileScreen(
-                            title: userData[index]['name']['title'],
-                            first: userData[index]['name']['first'],
-                            last: userData[index]['name']['last'],
-                            gender: userData[index]['gender'],
-                            email: userData[index]['email'],
-                            picture: userData[index]['picture']),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileScreen(
+                          title: userData[index]['name']['title'],
+                          first: userData[index]['name']['first'],
+                          last: userData[index]['name']['last'],
+                          gender: userData[index]['gender'],
+                          email: userData[index]['email'],
+                          picture: userData[index]['picture']['large']),
+                    ),
+                  );
                 },
                 child: Container(
                   child: Padding(

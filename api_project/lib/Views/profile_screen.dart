@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({
+  ProfileScreen({
     Key? key,
     required this.title,
     required this.first,
@@ -21,6 +19,19 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile'),
+      ),
+      body: Column(
+        children: [
+          Container(
+            child: CircleAvatar(
+              child: Image.network(widget.picture),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
