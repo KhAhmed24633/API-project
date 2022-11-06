@@ -35,7 +35,10 @@ class _RandomApiState extends State<RandomApi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Random API'),
+        title: const Text(
+          'Random API',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         // backgroundColor:colo ,
       ),
       body: Builder(builder: (context) {
@@ -67,9 +70,9 @@ class _RandomApiState extends State<RandomApi> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                       child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -94,7 +97,7 @@ class _RandomApiState extends State<RandomApi> {
             },
           );
         }
-        return const CircularProgressIndicator();
+        return const Center(child: CircularProgressIndicator());
       }),
     );
   }

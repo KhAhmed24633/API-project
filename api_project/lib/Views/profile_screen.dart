@@ -21,14 +21,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: Text(''),
       ),
       body: Column(
         children: [
-          Container(
-            child: CircleAvatar(
-              child: Image.network(widget.picture),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: CircleAvatar(
+                  child: Image.network(widget.picture),
+                  radius: 50,
+                ),
+              ),
+            ],
           )
         ],
       ),
