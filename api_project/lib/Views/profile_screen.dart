@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: const Text(''),
       ),
       body: Column(
         children: [
@@ -35,6 +35,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ],
+          ),
+          const ListTile(
+            leading: Icon(
+              Icons.person,
+              color: Colors.black,
+              size: 40,
+            ),
+            title: Text(
+              'Name',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text(
+              'ABdula lalsjffhnv',
+              style: TextStyle(fontSize: 16),
+            ),
           )
         ],
       ),
